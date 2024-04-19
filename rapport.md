@@ -8,9 +8,7 @@ During this practical work, participants engaged in the classification of mice's
 
 ### Our implementation
 
-TODO : preprocessing -> why we did like that ? (fit_transform and transform)
-
-First of all, we imported the data and structured it in a way that we could handle. We took the 25 first features and took the first column as the target (the column with the rat's state).
+First of all, we imported the data and structured it in a way that we could handle. We took the 25 first features and took the first column as the target (the column with the rat's state). The normalization was made inside the k-fold.
 
 Then we implemented a basic program that created a MLP with keras. After that, the first thing we tried was changing the amount of layers and Perceptrons per layer. However, we didn't see a lot of difference at first. It looked like the problem we tried to handle was linearly separable or close to that since we reached F1_scores and accuracys around ~85% really fast. Then we tried adding neurons, incrasing epochs and changing optimizer functions. That made us reach around 90% micro f1_score and accuracy.
 
@@ -20,7 +18,7 @@ Optimisation functions we sticked to :
 - SGD 
 - SGD with momentum.
 
-To this program we quickly added the 3-fold that was required. 
+To this program we quickly added the 3-fold that was required since it seemed better to fit_scale the training data and transform the validation data to the scaler (we don't know what the validation data is at the time of the fit_transform so it shouldn't affect our scale)
 
 The confusion matrix showed us interesting things :
 
@@ -36,7 +34,9 @@ Matplotlib was also complicated to handle at times and having it display the inf
 
 ### Our implementation
 
-Compared to the last experiment since we had 1 more class it was likely that we needed more perceptrons 
+Compared to the last experiment since we had 1 more class it was likely that we needed more perceptrons.
+
+We need 3 output neurons, in an ideal world we needed them to send 1 if it's the correct class and 0 if it's another class.
 
 
 ### Problems found
