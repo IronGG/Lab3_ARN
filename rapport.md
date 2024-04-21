@@ -95,6 +95,7 @@ automatise the process and did it by hand.
 **Summary :**
 
 ![Model Summary](Ressources/1stExperiment_Summary.png)
+<div style="page-break-before: always;"></div>
 
 ### Another model ?
 
@@ -157,6 +158,8 @@ We need 3 output neurons, in an ideal world we needed them to send 1 if it's the
 class. This adjusted automatically thanks to our code. `model.add(Dense(y.shape[1], activation='softmax'))`
 
 Overall, for this experiment we tried again a different things but few managed to increase the f1_scores we obtained.
+
+<div style="page-break-before: always;"></div>
 
 ### The model
 
@@ -258,6 +261,8 @@ The approach taken in this code can be divided into three main steps:
   decreases, while the validation loss experiences more fluctuations, suggesting potential issues with overfitting.
 - Confusion Matrix: This matrix shows some misclassification, with significant correct predictions but also observable
   errors in the non-diagonal cells.
+
+<div style="page-break-before: always;"></div>
 
 ### Observations
 
