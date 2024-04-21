@@ -93,6 +93,7 @@ lot of learning rates and train the model several times to see the outcomes. Tha
 automatise the process and did it by hand.
 
 **Summary :**
+
 ![Model Summary](Ressources/1stExperiment_Summary.png)
 
 ### Another model ?
@@ -133,9 +134,8 @@ This implies that by increasing the amount of perceptrons we actually got better
 model really early.
 
 **Summary :**
-![Model Summary](Ressources/1stExperiment_Another_Summary.png)
 
-We created a notebook for this experiment. it's named lab3_BarreiraRomero_AnotherModel
+![Model Summary](Ressources/1stExperiment_Another_Summary.png)
 
 ### Problems found
 
@@ -190,6 +190,7 @@ data, rem doesn't look to be represented a lot so our model struggles with it. T
 per class aswell as in the confusion matrix.
 
 **Summary :**
+
 ![Model Summary](Ressources/2ndExperiment_Summary.png)
 
 **Important : On the third experiment / competition we reused and improved the second's experiment further. So this
