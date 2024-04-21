@@ -41,7 +41,7 @@ Optimisation functions we sticked to :
 - SGD with momentum.
 
 Another interesting fact about this experience is the fact that adding a lot of neurons was likely to make our model
-overfitting, yet without going overboard, our model performed better depending on the validation data and the amount of
+overfitting, yet without going overboard (with the perceptrons amount), our model performed better depending on the validation data and the amount of
 perceptrons and hidden layers given.
 
 ### The model
@@ -124,6 +124,9 @@ We wanted to show this model because it gave us way better results as shown here
 This one is interesting because once again we can see overfitting but it looks like the initial training in the the
 first fold got the best result across all validations. Adding any more training was bad.
 
+This implies that by increasing the amount of perceptrons we actually got better results, but we should stop trainng the
+model really early.
+
 We created a notebook for this experiment. it's named lab3_BarreiraRomero_AnotherModel
 
 ### Problems found
@@ -145,7 +148,7 @@ we have more than 2 classes.
 We need 3 output neurons, in an ideal world we needed them to send 1 if it's the correct class and 0 if it's another
 class. This adjusted automatically thanks to our code. `model.add(Dense(y.shape[1], activation='softmax'))`
 
-Overall, for this experiment we tried again a few things but few managed
+Overall, for this experiment we tried again a different things but few managed to increase the f1_scores we obtained.
 
 ### The model
 
@@ -187,7 +190,8 @@ model isn't everything we tested and was not the best results we found. (Check C
 
 At this step a lot of times, our trained model always guessed wake (which means around 60% f1_score) or wake + sleep
 forgetting rem (which was around 80% f1_score). This made us rethink a lot of things and lose some time. In the end we
-figured that sigmoid activation function were a "no go" and switched to relu instead.
+figured that sigmoid activation function were a "no go" and switched to relu instead. We also switched the output
+sigmoid to softmax.
 
 ## Competition
 
