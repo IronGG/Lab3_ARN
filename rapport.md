@@ -41,7 +41,8 @@ Optimisation functions we sticked to :
 - SGD with momentum.
 
 Another interesting fact about this experience is the fact that adding a lot of neurons was likely to make our model
-overfitting, yet without going overboard (with the perceptrons amount), our model performed better depending on the validation data and the amount of
+overfitting, yet without going overboard (with the perceptrons amount), our model performed better depending on the
+validation data and the amount of
 perceptrons and hidden layers given.
 
 ### The model
@@ -72,7 +73,8 @@ The confusion matrix and scores showed us interesting things (last validation da
 
 ![Confusion matrix](Ressources/1stExperiment.png)
 
-Our model tends to predict wake more often. Probably because the wake state is more present in our data sets.
+Our model tends to predict wake more often. Probably because the wake state is more present in our data sets. Other than
+that, the confusion matrix looks alright.
 
 We decided to go with this model since it was the most interesting one. Because it gave good results and it used all we
 learned combined, with multi-layers, SGD optimizer function with decay and momentum, and relu/sigmoid activation
@@ -89,6 +91,9 @@ see in the loss function.
 The chosen learning rate is 0.01 since we don't want anything too big but not too small either, ideally we should try a
 lot of learning rates and train the model several times to see the outcomes. That's what we did but we did not
 automatise the process and did it by hand.
+
+**Summary :**
+![Model Summary](Ressources/1stExperiment_Summary.png)
 
 ### Another model ?
 
@@ -126,6 +131,9 @@ first fold got the best result across all validations. Adding any more training 
 
 This implies that by increasing the amount of perceptrons we actually got better results, but we should stop trainng the
 model really early.
+
+**Summary :**
+![Model Summary](Ressources/1stExperiment_Another_Summary.png)
 
 We created a notebook for this experiment. it's named lab3_BarreiraRomero_AnotherModel
 
@@ -170,9 +178,6 @@ The model used provided this matrix and scores for the last validation data :
 
 ![2ndExperiment_loss.png](Ressources/2ndExperiment_loss.png)
 
-This model is interesting because, although we used less perceptrons than in the first experiment, it achived a decent
-score. We wanted to showcase that, with some perceptrons we can already have a good guess at which state it is.
-
 We trained this model for 10 epochs since it looked like in every fold and it was getting better. Training this model
 longer would probably lead to better results. Since validation got better and better. Loss functions also decreased,
 which is good.
@@ -181,7 +186,11 @@ better result.
 The moment we want to push the model further is in the competition so we kept this challenge for that part.
 
 Another note we wanted to add is that the model has a hard time guessing rem sleep stages, we might want to have more
-data, rem doesn't look to be represented a lot so our model struggles with it.
+data, rem doesn't look to be represented a lot so our model struggles with it. This problem can be seen n the f1_scores
+per class aswell as in the confusion matrix.
+
+**Summary :**
+![Model Summary](Ressources/2ndExperiment_Summary.png)
 
 **Important : On the third experiment / competition we reused and improved the second's experiment further. So this
 model isn't everything we tested and was not the best results we found. (Check Competition)**
