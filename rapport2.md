@@ -31,10 +31,10 @@ The approach taken in this code can be divided into three main steps:
 - Graph Description: The graph shows training and validation loss over 20 epochs. The training loss decreases steadily, while the validation loss oscillates but generally trends downward, indicating possible model stability.
 - Confusion Matrix: The matrix suggests a moderate level of misclassification, with some errors observed among the predicted labels. The majority of correct predictions are along the diagonal.
 
-![](2.png)
+![](3.png)
 - Graph Description: The loss graph shows a consistent decrease in training loss, with a more volatile validation loss. This volatility may indicate some instability in the model's generalization.
 - Confusion Matrix: The confusion matrix demonstrates a reasonable level of correct predictions, especially for one class. However, there's some misclassification among the other classes.
-![](3.png)
+![](2.png)
 
 - Graph Description: The graph depicts the training and validation losses over epochs. The training loss consistently decreases, while the validation loss experiences more fluctuations, suggesting potential issues with overfitting.
 - Confusion Matrix: This matrix shows some misclassification, with significant correct predictions but also observable errors in the non-diagonal cells.
