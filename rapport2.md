@@ -17,7 +17,7 @@ The approach taken in this code can be divided into three main steps:
    - Another Dense layer with 256 neurons and a sigmoid activation function.
    - The model is compiled with a loss function of 'categorical_crossentropy' and an optimizer of 'adamax'.
 
-    ![](4.png)
+    ![](Ressources/compet4.png)
 
     The number of neurons in the hidden layers, the activation function, the weight initialization method, and the optimizer are all parameters that were tuned. This configuration of the model is a result of both manual and automatic tuning. The batch size and the number of epochs were manually set. These parameters were chosen carefully to avoid overfitting. On the other hand, the optimizer and learning rate were determined using an automatic method, specifically a grid search. 
     However, it's important to note that a very small learning rate, a large number of epochs or a small batch size can cause the model to take a long time to compile. Therefore, a balance was sought to ensure efficient learning without excessive computational cost.
@@ -27,14 +27,14 @@ The approach taken in this code can be divided into three main steps:
 
 ### Results
 
-![](1.png)
+![](Ressources/compet1.png)
 - Graph Description: The graph shows training and validation loss over 20 epochs. The training loss decreases steadily, while the validation loss oscillates but generally trends downward, indicating possible model stability.
 - Confusion Matrix: The matrix suggests a moderate level of misclassification, with some errors observed among the predicted labels. The majority of correct predictions are along the diagonal.
 
-![](3.png)
+![](Ressources/compet3.png)
 - Graph Description: The loss graph shows a consistent decrease in training loss, with a more volatile validation loss. This volatility may indicate some instability in the model's generalization.
 - Confusion Matrix: The confusion matrix demonstrates a reasonable level of correct predictions, especially for one class. However, there's some misclassification among the other classes.
-![](2.png)
+![](Ressources/compet2.png)
 
 - Graph Description: The graph depicts the training and validation losses over epochs. The training loss consistently decreases, while the validation loss experiences more fluctuations, suggesting potential issues with overfitting.
 - Confusion Matrix: This matrix shows some misclassification, with significant correct predictions but also observable errors in the non-diagonal cells.

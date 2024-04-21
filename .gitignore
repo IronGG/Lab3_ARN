@@ -1,8 +1,0 @@
-# Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!lab3.ipynb
-!rapport.md
-!test_pred.npy
