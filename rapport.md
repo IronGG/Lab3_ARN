@@ -147,7 +147,7 @@ class. This adjusted automatically thanks to our code. `model.add(Dense(y.shape[
 
 Overall, for this experiment we tried again a few things but few managed
 
-### The model used
+### The model
 
 ```
 # Define the MLP model
